@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+	xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+	tools:ignore="HardcodedText,ContentDescription">
+	<RelativeLayout android:id="@+id/LayoutHeader"
+  		android:layout_height="wrap_content" android:layout_width="fill_parent"
+  		android:layout_alignParentTop="true" android:background="@drawable/bkgnd_header">
+	
+		<ImageButton android:id="@+id/ButtonGoUp" 
+			android:layout_width="wrap_content" android:layout_height="wrap_content" 
+			android:layout_alignParentLeft="true" 
+			android:src="@drawable/button_goback" 
+			android:contentDescription="@string/desc_goto_parent" 
+			android:paddingBottom="5dip" 
+			android:paddingLeft="5dip" 
+			android:paddingRight="5dip" 
+			android:paddingTop="0dip" 
+			android:layout_marginTop="1dip" />
+		<TextView android:id="@+id/TextViewFolderName" 
+			android:layout_height="wrap_content" android:layout_width="wrap_content" 
+			android:text="@string/msg_busy" 
+			android:layout_toRightOf="@+id/ButtonGoUp" 
+			android:textColor="@android:color/white" 
+			android:clickable="false" 
+			android:focusable="false" 
+			android:layout_toLeftOf="@+id/ButtonGoJump" 
+			android:layout_marginTop="2dip" />
+		<ImageButton android:id="@+id/ButtonGoJump" 
+			android:layout_width="wrap_content" android:layout_height="wrap_content" 
+			android:layout_alignParentRight="true" 
+			android:src="@drawable/button_gojump" 
+			android:paddingRight="5dip" 
+			android:paddingLeft="5dip" 
+			android:paddingBottom="5dip" 
+			android:paddingTop="0dip" 
+			android:layout_marginTop="1dip" 
+			android:contentDescription="@string/menu_item_jumpto" />
+		<TextView android:id="@+id/TextViewMemSpace" 
+			android:layout_toLeftOf="@id/ButtonGoJump" 
+			android:layout_width="wrap_content" android:layout_height="wrap_content" 
+			android:layout_alignBottom="@id/ButtonGoJump" 
+			android:text="3.1Gb free" 
+			android:textColor="@android:color/black" />
+		<ImageView android:id="@+id/ImageViewLowSpaceWarning" 
+			android:layout_height="wrap_content" android:layout_width="wrap_content" 
+			android:layout_toLeftOf="@id/TextViewMemSpace" 
+			android:src="@android:drawable/ic_dialog_alert" 
+			android:layout_alignBottom="@+id/ButtonGoJump" />
+		<ImageView android:id="@+id/ImageViewFolderReadOnly" 
+			android:layout_height="wrap_content" android:layout_width="wrap_content" 
+			android:layout_toLeftOf="@id/ImageViewLowSpaceWarning" 
+			android:src="@drawable/emblem_readonly" 
+			android:layout_alignBottom="@+id/ButtonGoJump" />
+			</RelativeLayout>
+	
+	<FrameLayout android:id="@+id/LayoutPick"
+		android:layout_height="wrap_content" android:layout_width="fill_parent"
+		android:layout_alignParentBottom="true" 
+		android:background="#808080">
+
+		<RelativeLayout android:id="@+id/LayoutPickFolder"
+			android:layout_height="wrap_content" android:layout_width="fill_parent">
+			<Button android:id="@+id/ButtonPickFolder"
+				android:layout_width="wrap_content" android:layout_height="wrap_content" 
+				android:text="@string/button_pickfolder" />
+			<Button android:id="@+id/ButtonNewFolder" 
+				android:layout_width="wrap_content" android:layout_height="wrap_content" 
+				android:text="@string/menu_item_new_folder" 
+				android:layout_alignParentRight="true" />
+		</RelativeLayout>
+		<RelativeLayout android:id="@+id/LayoutPickFile" 
+			android:layout_height="wrap_content" android:layout_width="fill_parent">
+			<Button android:id="@+id/ButtonPickFile" 
+				android:layout_height="wrap_content" android:layout_width="wrap_content" 
+				android:text="@string/button_pickfile" />
+		</RelativeLayout>
+	</FrameLayout>
+	
+	<RelativeLayout android:id="@+id/LayoutBody" 
+		android:layout_height="fill_parent" android:layout_width="fill_parent" 
+		android:layout_below="@id/LayoutHeader" 
+		android:layout_above="@id/LayoutPick" 
+		android:visibility="visible" >
+
+		<LinearLayout android:id="@+id/LayoutGridDetailBox"
+			android:layout_height="wrap_content" android:layout_width="fill_parent" 
+			android:layout_alignParentBottom="true" >
+			<ViewStub android:id="@+id/LayoutGridDetail_stub" 
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:minHeight="?android:attr/listPreferredItemHeight"
+			    android:orientation="horizontal"
+				android:inflatedId="@+id/LayoutGridDetail" 
+				android:layout="@layout/fb_item" />
+		</LinearLayout>
+		<LinearLayout android:id="@+id/LayoutProgress"
+			android:layout_height="wrap_content" android:layout_width="fill_parent" 
+			android:layout_above="@id/LayoutGridDetailBox" 
+			android:orientation="vertical" >
+		</LinearLayout>
+		<ViewSwitcher android:id="@+id/SwitcherViewType"
+		  android:layout_height="fill_parent" android:layout_width="fill_parent" 
+		  android:layout_below="@id/LayoutHeader" 
+		  android:layout_above="@id/LayoutProgress" 
+ 		  android:focusable="true" > 
+			<LinearLayout android:id="@+id/LayoutList"
+				android:layout_height="wrap_content" android:layout_width="fill_parent" 
+				android:orientation="vertical" >
+		    	<include layout="@layout/widget_list_view" 
+				  android:layout_height="wrap_content" android:layout_width="fill_parent" 
+		    	/>
+				<TextView android:id="@id/android:empty" 
+					android:layout_height="wrap_content" android:layout_width="fill_parent" 
+					android:layout_marginTop="20dip" 
+					android:gravity="center_horizontal" 
+					android:textColor="@android:color/primary_text_dark" 
+					android:text="@string/list_empty" />
+			</LinearLayout>
+			<LinearLayout android:id="@+id/LayoutGrid"
+				android:layout_height="fill_parent" android:layout_width="fill_parent" 
+				android:orientation="vertical" >
+		    	<include layout="@layout/widget_grid_view" 
+				  android:layout_height="fill_parent" android:layout_width="fill_parent"   
+		    	/>
+				<TextView android:id="@+id/EmptyGridView" 
+					android:layout_height="wrap_content" android:layout_width="fill_parent" 
+					android:layout_marginTop="20dip" 
+					android:gravity="center_horizontal" 
+					android:textColor="@android:color/primary_text_dark" 
+					android:text="@string/list_empty" />
+			</LinearLayout>
+		</ViewSwitcher>
+	</RelativeLayout>
+</RelativeLayout>

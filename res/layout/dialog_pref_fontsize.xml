@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+
+<TextView android:id="@android:id/message" 
+	android:layout_height="wrap_content" android:layout_width="fill_parent" 
+	android:layout_alignParentTop="true"
+	android:textColor="@android:color/primary_text_dark" 
+	android:text="MessageText"
+	android:gravity="center_vertical" 
+	android:height="42dip" 
+	></TextView>
+<SeekBar android:id="@+id/dialog_pref_slider_SeekBar" 
+	android:layout_height="wrap_content" android:layout_width="fill_parent" 
+	android:layout_below="@android:id/message" 
+	android:max="100" 
+	android:layout_margin="12dip" 
+	></SeekBar>
+<TextView android:id="@+id/dialog_pref_slider_Summary" 
+	android:layout_height="wrap_content" android:layout_width="wrap_content" 
+	android:layout_below="@id/dialog_pref_slider_SeekBar" 
+	android:layout_alignLeft="@+id/dialog_pref_slider_SeekBar" 
+	android:textColor="@android:color/primary_text_dark" 
+	android:text="SummaryText"
+	android:gravity="center_vertical" 
+	android:height="42dip" 
+	></TextView>
+
+</RelativeLayout>

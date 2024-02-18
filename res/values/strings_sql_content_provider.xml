@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="sql_content_provider_msg_missing_column">Missing column: %s</string>
+<string name="sql_content_provider_msg_insert_fail">"Failed to insert row into %s"</string>
+
+</resources>

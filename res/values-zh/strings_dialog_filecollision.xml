@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="dialog_filecollision_title">檔案/文件夾名稱已存在</string>
+<string name="dialog_filecollision_overwrite">覆寫檔案及文件夾</string>
+<string name="dialog_filecollision_keepboth">同時保留兩個檔案</string>
+<string name="dialog_filecollision_skip">停止操作!</string>
+<string name="dialog_filecollision_canceltext">忽略重複的項目…</string>
+
+</resources>

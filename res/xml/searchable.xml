@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<searchable
+  xmlns:android="http://schemas.android.com/apk/res/android" 
+  android:label="@string/app_name" 
+  android:hint="@string/search_hint" 
+  android:queryAfterZeroResults="false" 
+  android:includeInGlobalSearch="true" 
+  android:searchSettingsDescription="@string/search_desc" 
+  android:voiceLanguageModel="web_search" 
+  android:voiceSearchMode="showVoiceSearchButton|launchRecognizer"
+  android:searchSuggestAuthority="com.blackmoonit.FileBrowser.SearchProvider"
+  android:searchSuggestSelection=" ?"
+  android:searchSuggestIntentAction="android.intent.action.VIEW" android:inputType="text">
+  <!-- used if we make a custom search provider 
+  android:searchSuggestIntentAction="android.intent.action.VIEW"
+  android:searchSuggestIntentData="content://com.blackmoonit.android.FileBrowser.SearchProvider"
+  -->
+</searchable>

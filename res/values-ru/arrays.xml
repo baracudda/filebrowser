@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+<string-array name="pref_entries_thumbnail_size">
+	<item>Иконка</item>
+	<item>Малый</item>
+	<item>Средний</item> 
+	<item>Большой</item>
+</string-array>
+<string-array name="pref_entries_sort_order">
+	<item>По имени</item>
+	<item>По дате</item>
+	<item>По размеру</item> 
+	<item>По типу</item>
+</string-array>
+<string-array name="pref_entries_font_size">
+	<item>Автоматически</item>
+	<item>8</item>
+	<item>10 (Малый)</item>
+	<item>12</item>
+	<item>14</item>
+	<item>16</item>
+	<item>18 (Средний)</item>
+	<item>20</item>
+	<item>22</item>
+	<item>24 (Большой)</item>
+	<item>28</item>
+	<item>32</item>
+</string-array>
+<string-array name="pref_entries_orientation">
+	<item>По умолчанию</item>
+	<item>Согласно сенсору</item>
+	<item>Портретная</item>
+	<item>Пейзажная</item>
+	<!-- <item>Пейзажная \"наоборот\"</item> -->
+</string-array>
+
+</resources>

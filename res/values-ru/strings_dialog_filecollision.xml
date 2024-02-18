@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="dialog_filecollision_title">Найдены одинаковые элементы</string>
+<string name="dialog_filecollision_overwrite">Перезаписать</string>
+<string name="dialog_filecollision_keepboth">Сохранить обе копии</string>
+<string name="dialog_filecollision_skip">Ничего не делать</string>
+<string name="dialog_filecollision_canceltext">Игнорируем одинаковые…</string>
+
+</resources>

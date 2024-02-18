@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:ignore="ContentDescription" >
+    
+	<ImageView android:id="@+id/ImageReadOnlyEmblem" 
+	  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+	  android:src="@drawable/emblem_readonly" 
+	  android:visibility="invisible" 
+	  android:layout_gravity="bottom|left"
+	/>
+	<ImageView android:id="@+id/ImageSelectedEmblem" 
+	  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+	  android:src="@drawable/emblem_check"
+	  android:contentDescription="@string/desc_file_marked" 
+	  android:visibility="invisible" 
+	  android:layout_gravity="top|right"
+	/>
+</merge>

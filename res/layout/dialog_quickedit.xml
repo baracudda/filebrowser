@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+  android:layout_width="fill_parent" android:layout_height="fill_parent"
+  android:orientation="vertical" >
+	
+    <EditText android:id="@+id/dialog_quickedit_text" 
+      android:layout_width="fill_parent" android:layout_height="wrap_content" 
+	  android:minWidth="208dip"
+      android:layout_margin="4dip" 
+      android:inputType="text" android:imeOptions="actionDone" 
+      android:nextFocusForward="@+id/ButtonPositive"
+      android:nextFocusDown="@+id/ButtonPositive"
+    />
+	<FrameLayout 
+	  android:layout_width="fill_parent" android:layout_height="wrap_content"
+	>
+    	<include android:id="@+id/dialog_quickedit_button_positive" 
+    	    layout="@layout/button_positive" />
+		<include android:id="@+id/dialog_quickedit_button_negative" 
+		    layout="@layout/button_negative" />
+	</FrameLayout>
+	
+</LinearLayout>

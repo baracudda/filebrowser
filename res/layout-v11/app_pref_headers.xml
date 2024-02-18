@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<header android:fragment="com.blackmoonit.app.BitsPreferences$BitsPrefsFragment"
+	android:icon="@android:drawable/ic_menu_sort_by_size"
+	android:title="@string/prefscat_sort"
+	>
+	<!-- Arbitrary key/value pairs can be included with a header as arguments to its fragment. -->
+	<extra android:name="layout-res" android:value="app_prefs" />
+</header>    	
+
+<header android:fragment="com.blackmoonit.app.BitsPreferences$BitsPrefsFragment"
+    android:icon="@android:drawable/ic_menu_gallery"
+	android:title="@string/prefscat_appearance"
+	>
+	<extra android:name="layout-res" android:value="app_prefs_appearance" />
+</header>
+
+<header android:fragment="com.blackmoonit.app.BitsPreferences$BitsPrefsFragment"
+    android:icon="@android:drawable/ic_menu_edit"
+	android:title="@string/prefscat_behavior"
+	>
+	<extra android:name="layout-res" android:value="app_prefs_behavior" />
+</header>
+
+<header 
+    android:icon="@drawable/icon_question"
+	android:title="@string/dialog_about_button_faq"
+	android:summary="@string/dialog_about_link_faq">
+	<intent android:action="android.intent.action.VIEW" android:data="@string/dialog_about_link_faq" />
+</header>
+
+</preference-headers>

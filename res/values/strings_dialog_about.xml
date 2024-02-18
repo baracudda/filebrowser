@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+<!-- DO NOT TRANSLATE -->
+<string name="dialog_about_version_display" tools:ignore="MissingTranslation">&lt;font color=aqua&gt;(&amp;gt;&lt;/font&gt;&lt;font color=yellow&gt;\'&lt;/font&gt;&lt;font color=aqua&gt;-&lt;/font&gt;&lt;font color=yellow&gt;\'&lt;/font&gt;&lt;font color=aqua&gt;)&amp;gt;&lt;/font&gt; &lt;font color=lime&gt;[ %1$s ]&lt;/font&gt; &lt;font color=aqua&gt;&amp;lt;(&lt;/font&gt;&lt;font color=yellow&gt;\'&lt;/font&gt;&lt;font color=aqua&gt;-&lt;/font&gt;&lt;font color=yellow&gt;\'&lt;/font&gt;&lt;font color=aqua&gt;&amp;lt;)&lt;/font&gt;</string>
+<string name="dialog_about_copyright" tools:ignore="MissingTranslation">© 2009 Blackmoon Info Tech Services\nAll Rights Reserved</string>
+<string name="dialog_about_text_thanks" tools:ignore="MissingTranslation">&lt;font color=yellow&gt; + &lt;/font&gt;A big \&quot;thank you!\&quot; to Макс, Wolf-Peter, Victor, David, Sarav, Shadow, Raffaele, the &lt;a href=&quot;http://tango.freedesktop.org/Tango_Desktop_Project&quot;&gt;Tango Project&lt;/a&gt; for wonderful Public Domain icons, and many others who help improve the app!</string>
+<string name="dialog_about_link_changelog" tools:ignore="MissingTranslation">http://www.blackmoonit.com/android/filebrowser/versioninfo</string>
+<string name="dialog_about_link_faq" tools:ignore="MissingTranslation">http://www.blackmoonit.com/android/filebrowser/faq/</string>
+<string name="dialog_about_link_email" tools:ignore="MissingTranslation">androidapps@blackmoonit.com</string>
+<!-- TRANSLATE -->
+<string name="version_name">Version %1$s</string>
+<string name="dialog_about_menu_item">About</string>
+<string name="dialog_about_button_changelog">changelog</string>
+<string name="dialog_about_button_faq">FAQ</string>
+<string name="dialog_about_button_email">email</string>
+<string name="dialog_about_imgdesc_bits_logo" tools:ignore="MissingTranslation">BITS company logo</string>
+</resources>

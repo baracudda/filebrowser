@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+<string-array name="pref_entries_thumbnail_size">
+	<item>Icon</item>
+	<item>Small</item>
+	<item>Medium</item> 
+	<item>Large</item>
+</string-array>
+<string-array name="pref_entryvalues_thumbnail_size" tools:ignore="MissingTranslation">
+	<item>1</item>
+	<item>2</item>
+	<item>4</item>
+	<item>8</item>
+</string-array>
+
+<string-array name="pref_entries_sort_order">
+	<item>Name</item>
+	<item>Date</item>
+	<item>Size</item> 
+	<item>Type</item>
+</string-array>
+<string-array name="pref_entryvalues_sort_order" tools:ignore="MissingTranslation">
+	<item>name</item>
+	<item>date</item>
+	<item>size</item>
+	<item>type</item>
+</string-array>
+
+<string-array name="pref_entries_font_size">
+	<item>Auto</item>
+	<item>8</item>
+	<item>10 (Small)</item>
+	<item>12</item>
+	<item>14</item>
+	<item>16</item>
+	<item>18 (Medium)</item>
+	<item>20</item>
+	<item>22</item>
+	<item>24 (Large)</item>
+	<item>28</item>
+	<item>32</item>
+</string-array>
+<string-array name="pref_entryvalues_font_size" tools:ignore="MissingTranslation">
+	<item>0</item>
+	<item>8</item>
+	<item>10</item>
+	<item>12</item>
+	<item>14</item>
+	<item>16</item>
+	<item>18</item>
+	<item>20</item>
+	<item>22</item>
+	<item>24</item>
+	<item>28</item>
+	<item>32</item>
+</string-array>
+
+<string-array name="pref_entries_orientation">
+	<item>Default</item>
+	<item>Auto</item>
+	<item>Portrait</item>
+	<item>Landscape</item>
+	<!-- <item>Seascape</item> -->
+</string-array>
+<string-array name="pref_entryvalues_orientation" tools:ignore="MissingTranslation">
+	<item>-2</item>
+	<item>-1</item>
+	<item>0</item>
+	<item>1</item>
+	<item>3</item>
+</string-array>
+
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="text_savelocation">位置:</string>
+<string name="text_savefilename">文件名:</string>
+<string name="msg_askbrowser">未能找到瀏覽器，你願意下載嗎？</string>
+
+</resources>

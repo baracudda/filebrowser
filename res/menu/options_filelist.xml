@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+<item android:enabled="true" android:title="@string/menu_item_markstart" android:visible="true" android:icon="@drawable/emblem_check" android:checkable="false" android:orderInCategory="1" android:id="@+id/menu_item_markstart"></item>
+<item android:enabled="true" android:title="@string/menu_item_markactions" android:id="@+id/menu_item_markactions" android:visible="false" android:checkable="false" android:orderInCategory="2" android:icon="@drawable/icon_menu_markactions">
+	<menu>
+		<item android:checkable="false" android:id="@+id/menu_item_markmode" android:enabled="true" android:visible="true" android:title="@string/menu_item_markstart"></item>
+		<item android:id="@+id/menu_item_mark_all" android:enabled="true" android:title="@string/menu_item_mark_all" android:visible="true" android:checkable="false"></item>
+		<item android:id="@+id/menu_item_cancel_marked" android:enabled="true" android:title="@string/menu_item_cancel_marked" android:visible="true" android:checkable="false"></item>
+		<item android:id="@+id/menu_item_send_marked" android:enabled="true" android:title="@string/menu_item_send_marked" android:visible="true" android:checkable="false"></item>
+		<item android:checkable="false" android:id="@+id/menu_item_move_marked_to" android:enabled="true" android:visible="true" android:title="@string/menu_item_move_marked_to"></item>
+		<item android:id="@+id/menu_item_copy_marked_to" android:enabled="true" android:visible="true" android:title="@string/menu_item_copy_marked_to" android:checkable="false"></item>
+		<item android:id="@+id/menu_item_move_marked" android:enabled="true" android:title="@string/menu_item_move_marked" android:visible="true" android:checkable="false"></item>
+		<item android:id="@+id/menu_item_copy_marked" android:enabled="true" android:title="@string/menu_item_copy_marked" android:visible="true" android:checkable="false"></item>
+		<item android:id="@+id/menu_item_delete_marked" android:enabled="true" android:title="@string/menu_item_delete_marked" android:visible="true" android:checkable="false"></item>
+	</menu>
+</item>
+<item android:enabled="true" android:title="@string/menu_item_viewtype_list" android:visible="false" android:icon="@drawable/icon_viewtype_list" android:checkable="false" android:orderInCategory="3" android:id="@+id/menu_item_viewtype_list" />
+<item android:enabled="true" android:title="@string/menu_item_viewtype_grid" android:visible="true" android:icon="@drawable/icon_viewtype_grid" android:checkable="false" android:orderInCategory="3" android:id="@+id/menu_item_viewtype_grid" />
+<item android:enabled="true" android:title="@string/dialog_about_menu_item" android:id="@+id/menu_item_info" android:visible="true" android:checkable="false" android:icon="@android:drawable/ic_menu_help" android:orderInCategory="4"></item>
+<item android:enabled="true" android:title="@string/menu_item_folderactions" android:id="@+id/menu_item_folderactions" android:visible="true" android:checkable="false" android:icon="@android:drawable/ic_menu_more" android:orderInCategory="6">
+	<menu>
+		<item android:id="@+id/menu_item_newfolder" android:enabled="true" android:title="@string/menu_item_new_folder" android:visible="true" android:checkable="false"></item>
+		<item android:id="@+id/menu_item_refreshcard" android:enabled="true" android:title="@string/menu_item_refreshcard" android:visible="true" android:checkable="false" android:numericShortcut="5"></item>
+		<item android:id="@+id/menu_item_jumpto" android:title="@string/menu_item_jumpto" android:visible="true" android:checkable="false" android:enabled="true"></item>
+		<item android:enabled="true" android:title="@string/menu_item_mark_all" android:visible="true" android:checkable="false" android:id="@+id/menu_item_mark_all2"></item>
+		<item android:title="@string/menu_item_search" android:checkable="false" android:visible="true" android:id="@+id/menu_item_search" android:enabled="true"></item>
+		<item android:id="@+id/menu_item_search_tips" android:title="@string/menu_item_search_tips" android:visible="true" android:checkable="false" android:enabled="true"></item>
+		<group android:enabled="true" android:checkableBehavior="none" android:visible="true" android:id="@+id/menu_group_plugin_actions"></group>
+</menu>
+</item>
+<group android:enabled="true" android:checkableBehavior="none" android:visible="false" android:id="@+id/menu_group_plugin_options" android:orderInCategory="5">
+	<item android:enabled="true" android:title="@string/menu_item_more" android:id="@+id/menu_item_plugins" android:visible="false" android:checkable="false" android:icon="@android:drawable/ic_menu_more">
+		<menu>
+		</menu>
+	</item>
+</group>
+<group android:id="@+id/menu_group_settings" android:orderInCategory="8">
+	<item android:id="@+id/menu_item_settings" tools:ignore="MenuTitle"></item>
+</group>
+<item android:id="@+id/menu_item_exit" android:icon="@android:drawable/ic_menu_close_clear_cancel" android:orderInCategory="9" android:title="@string/menu_item_exit"></item>
+</menu>

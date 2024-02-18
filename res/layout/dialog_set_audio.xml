@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+  android:id="@+id/RelativeLayoutMain" 
+  android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:ignore="ContentDescription" >
+
+<TableLayout android:id="@+id/TableLayoutOptions" 
+  android:layout_width="wrap_content" android:layout_height="wrap_content" >
+	<TableRow android:id="@+id/TableRowRingtone" 
+	  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+	  android:minHeight="72dip">
+		<ImageView android:id="@+id/ImageViewRingtones" 
+		  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+		  android:src="@android:drawable/sym_action_call" 
+		  android:paddingRight="4dip" 
+		  android:layout_gravity="center_vertical|center_horizontal" />
+		<CheckedTextView android:id="@+id/CheckedTextViewRingtones" 
+			android:layout_width="wrap_content" android:layout_height="wrap_content" 
+			android:minWidth="144dip" android:minHeight="72dip" 
+			android:checked="false" 
+			android:checkMark="?android:attr/listChoiceIndicatorMultiple" 
+			android:text="@string/menu_item_audio_ringtone" 
+			android:gravity="center_vertical" />
+	</TableRow>
+	<TableRow android:id="@+id/TableRowNotification" 
+	  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+	  android:minHeight="72dip">
+		<ImageView android:id="@+id/ImageViewNotifications" 
+			android:layout_width="wrap_content" android:layout_height="wrap_content" 
+			android:src="@android:drawable/sym_action_chat" 
+			android:paddingRight="4dip" 
+			android:layout_gravity="center_vertical|center_horizontal">
+		</ImageView>
+		<CheckedTextView android:id="@+id/CheckedTextViewNotifications" 
+			android:layout_width="wrap_content" android:layout_height="wrap_content" 
+			android:minWidth="144dip" android:minHeight="72dip" 
+			android:checked="false" 
+			android:checkMark="?android:attr/listChoiceIndicatorMultiple" 
+			android:text="@string/menu_item_audio_notification" 
+			android:gravity="center_vertical" >
+		</CheckedTextView>
+	</TableRow>
+	<TableRow android:id="@+id/TableRowAlarm" 
+	  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+	  android:minHeight="72dip">
+		<ImageView android:id="@+id/ImageViewAlarms" 
+		  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+		  android:src="@android:drawable/ic_lock_idle_alarm" 
+		  android:paddingRight="4dip" 
+		  android:layout_gravity="center_vertical|center_horizontal">
+		</ImageView>
+		<CheckedTextView android:id="@+id/CheckedTextViewAlarms" 
+		  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+		  android:minWidth="144dip" android:minHeight="72dip" 
+		  android:checked="false" 
+		  android:checkMark="?android:attr/listChoiceIndicatorMultiple" 
+		  android:text="@string/menu_item_audio_alarm" 
+		  android:gravity="center_vertical" >
+		</CheckedTextView>
+	</TableRow>
+</TableLayout>
+
+<FrameLayout android:id="@+id/RelativeLayoutFooter" 
+  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+  android:layout_below="@id/TableLayoutOptions" 
+  android:layout_margin="8dip" 
+  android:layout_centerHorizontal="true" >
+	<Button android:id="@+id/ButtonJumpToAudioSettings" 
+	  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+	  android:text="@string/menu_item_jumpto" 
+	  android:drawableRight="@android:drawable/ic_menu_preferences" />
+</FrameLayout>
+
+</RelativeLayout>

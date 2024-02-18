@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:title="@string/prefscat_behavior">
+    <CheckBoxPreference android:defaultValue="false"
+        android:key="pref_key_backkey_exits"
+        android:title="@string/pref_title_backkey_exits"
+        android:summary="@string/pref_summary_backkey_exits" />
+    <CheckBoxPreference android:defaultValue="true"
+        android:key="pref_key_send_clears_marked"
+        android:title="@string/pref_title_send_clears_marked"
+        android:summary="@string/pref_summary_send_clears_marked" />
+    <CheckBoxPreference android:defaultValue="true"
+        android:key="pref_key_use_recyclebin"
+        android:title="@string/pref_title_use_recyclebin"
+        android:summary="@string/pref_summary_use_recyclebin" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/prefscat_search">
+    <com.blackmoonit.android.FileBrowser.QSBpreference
+        android:key="pref_key_search_global_settings"
+        android:title="@string/pref_title_search_global_settings"
+        android:summary="@string/pref_summary_search_global_settings" />
+  </PreferenceCategory>
+</PreferenceScreen>

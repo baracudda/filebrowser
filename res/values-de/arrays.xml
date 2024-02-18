@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+<string-array name="pref_entries_thumbnail_size">
+	<item>Icon</item>
+	<item>Klein</item>
+	<item>Mittel</item> 
+	<item>Groß</item>
+</string-array>
+<string-array name="pref_entries_sort_order">
+	<item>Name</item>
+	<item>Datum</item>
+	<item>Größe</item> 
+	<item>Typ</item>
+</string-array>
+<string-array name="pref_entries_font_size">
+	<item>Auto</item>
+	<item>8</item>
+	<item>10 (Klein)</item>
+	<item>12</item>
+	<item>14</item>
+	<item>16</item>
+	<item>18 (Mittel)</item>
+	<item>20</item>
+	<item>22</item>
+	<item>24 (Groß)</item>
+	<item>28</item>
+	<item>32</item>
+</string-array>
+<string-array name="pref_entries_orientation">
+	<item>Geräte-Vorgabe</item>
+	<item>gemäß Sensor</item>
+	<item>Hochformat</item>
+	<item>Querformat nach links</item>
+	<!-- <item>Querformat nach rechts</item> -->
+</string-array>
+
+</resources>

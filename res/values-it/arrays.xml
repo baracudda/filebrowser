@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+<string-array name="pref_entries_thumbnail_size">
+	<item>Icona</item>
+	<item>Piccola</item>
+	<item>Media</item> 
+	<item>Grande</item>
+</string-array>
+<string-array name="pref_entryvalues_thumbnail_size">
+	<item>1</item>
+	<item>2</item>
+	<item>4</item>
+	<item>8</item>
+</string-array>
+
+<string-array name="pref_entries_sort_order">
+	<item>Nome</item>
+	<item>Data</item>
+	<item>Dimensione</item> 
+	<item>Tipo</item>
+</string-array>
+<string-array name="pref_entryvalues_sort_order">
+	<item>name</item>
+	<item>date</item>
+	<item>size</item>
+	<item>type</item>
+</string-array>
+
+<string-array name="pref_entries_font_size">
+	<item>Auto</item>
+	<item>8</item>
+	<item>10 (Piccolo)</item>
+	<item>12</item>
+	<item>14</item>
+	<item>16</item>
+	<item>18 (Medio)</item>
+	<item>20</item>
+	<item>22</item>
+	<item>24 (Grande)</item>
+	<item>28</item>
+	<item>32</item>
+</string-array>
+<string-array name="pref_entryvalues_font_size">
+	<item>0</item>
+	<item>8</item>
+	<item>10</item>
+	<item>12</item>
+	<item>14</item>
+	<item>16</item>
+	<item>18</item>
+	<item>20</item>
+	<item>22</item>
+	<item>24</item>
+	<item>28</item>
+	<item>32</item>
+</string-array>
+
+<string-array name="pref_entries_orientation">
+	<item>Predefinito</item>
+	<item>Auto</item>
+	<item>Verticale</item>
+	<item>Orizzontale</item>
+	<!-- <item>Orizzontale inverso</item> -->
+</string-array>
+<string-array name="pref_entryvalues_orientation">
+	<item>-2</item>
+	<item>-1</item>
+	<item>0</item>
+	<item>1</item>
+	<item>3</item>
+</string-array>
+
+</resources>

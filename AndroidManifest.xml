@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.blackmoonit.android.FileBrowser" 
+	android:installLocation="auto" 
+	android:versionName="7.9" android:versionCode="134">
+    
+	<uses-sdk android:minSdkVersion="3" android:targetSdkVersion="17" />
+	<uses-feature android:name="android.hardware.faketouch" android:required="false" />
+	<uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <supports-screens 
+	  android:smallScreens="true" 
+      android:normalScreens="true" 
+      android:largeScreens="true" 
+      android:xlargeScreens="true" 
+      android:anyDensity="true" 
+      android:resizeable="true" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+	<application 
+      android:label="@string/app_name" 
+      android:description="@string/app_desc" 
+      android:icon="@drawable/app_filebrowser" 
+      android:theme="@style/Theme.FileBrowser" 
+      android:enabled="true" 
+      android:persistent="false" 
+      android:allowClearUserData="true" 
+      android:allowTaskReparenting="true" 
+      android:allowBackup="true" 
+      android:testOnly="false" 
+	  android:backupAgent=".AppBackupAgent" 
+	  android:hardwareAccelerated="true" 
+      android:hasCode="true" >
+		<meta-data 
+		  android:name="com.google.android.backup.api_key" 
+		  android:value="AEdPqrEAAAAIww8Sh8h0Ga7ELkClAolDy1nti7Mx5tJHsaEd5w" />
+		<activity android:name="FileListActivity"
+        	android:exported="true" 
+        	android:configChanges="keyboardHidden|orientation" >
+			<intent-filter>            
+				<action android:name="android.intent.action.PICK" />
+				<action android:name="org.openintents.action.PICK_FILE" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="file" />
+				<data android:scheme="folder" />
+				<data android:scheme="directory" />
+			</intent-filter>
+			<intent-filter>            
+				<action android:name="android.intent.action.PICK" />
+				<action android:name="org.openintents.action.PICK_FILE" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="file" />
+				<data android:scheme="folder" />
+				<data android:scheme="directory" />
+				<data android:mimeType="*/*" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.GET_CONTENT" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.OPENABLE" />
+				<data android:mimeType="*/*" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+				<category android:name="android.intent.category.BROWSABLE"/>
+				<data android:scheme="jumppoint" />
+				<data android:scheme="folder" />
+				<data android:scheme="directory" />
+				<data android:scheme="file" android:mimeType="container/directory" />
+			</intent-filter>
+            <meta-data android:name="android.app.default_searchable" android:value=".SearchableActivity" />
+		</activity>
+		<activity-alias
+			android:name="FileBrowser"
+			android:targetActivity="com.blackmoonit.android.FileBrowser.FileListActivity"
+			android:label="@string/app_name"
+		>
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity-alias>
+		<activity-alias android:name="CreateShortcutJumpPoint"
+            android:targetActivity="FileListActivity"
+            android:label="@string/menu_item_add_jumppoint">
+            <!--  This intent-filter allows your shortcuts to be created in the launcher. -->
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name="ViewJumpPoint"
+            android:targetActivity="FileListActivity"
+            android:exported="true" 
+            android:enabled="true" 
+            android:label="@string/menu_item_jumpto" 
+            android:icon="@drawable/button_gojump">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="jumppoint" android:mimeType="*/*" />
+			</intent-filter>
+        </activity-alias>
+        <activity-alias android:name="ViewFileAsJumpPoint"
+            android:targetActivity="FileListActivity"
+            android:exported="true" 
+            android:enabled="true" 
+            android:label="@string/menu_item_jumpto" 
+            android:icon="@drawable/button_gojump">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="file" android:mimeType="vnd.android.cursor.item/file" />
+			</intent-filter>
+        </activity-alias>
+        <activity-alias android:name="ViewdownloadAsJumpPoint"
+            android:targetActivity="FileListActivity"
+            android:exported="true" 
+            android:enabled="true" 
+            android:label="@string/menu_item_jumpto" 
+            android:icon="@drawable/button_gojump">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="file" android:mimeType="*/*" android:host="" android:pathPattern=".*/download/.*" />
+				<data android:scheme="file" android:mimeType="*/*" android:host="" android:pathPattern=".*/.*/download/.*" />
+				<data android:scheme="file" android:mimeType="*/*" android:host="" android:pathPattern=".*/.*/.*/download/.*" />
+				<data android:scheme="file" android:mimeType="*/*" android:host="" android:pathPattern=".*/.*/.*/.*/download/.*" />
+			</intent-filter>
+        </activity-alias>
+        <activity-alias android:name="ViewDownloadAsJumpPoint"
+            android:targetActivity="FileListActivity"
+            android:exported="true" 
+            android:enabled="true" 
+            android:label="@string/menu_item_jumpto" 
+            android:icon="@drawable/button_gojump">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="file" android:mimeType="*/*" android:host="" android:pathPattern=".*/Download/.*" />
+				<data android:scheme="file" android:mimeType="*/*" android:host="" android:pathPattern=".*/.*/Download/.*" />
+				<data android:scheme="file" android:mimeType="*/*" android:host="" android:pathPattern=".*/.*/.*/Download/.*" />
+				<data android:scheme="file" android:mimeType="*/*" android:host="" android:pathPattern=".*/.*/.*/.*/Download/.*" />
+			</intent-filter>
+        </activity-alias>
+        <activity-alias android:name="ViewContentDownloadAsJumpPoint"
+            android:targetActivity="FileListActivity"
+            android:exported="true" 
+            android:enabled="true" 
+            android:label="@string/menu_item_jumpto" 
+            android:icon="@drawable/button_gojump">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="content" android:mimeType="*/*" android:host="downloads" />
+			</intent-filter>
+        </activity-alias>
+        <activity android:name="PickFileShortcutActivity" 
+        	android:label="@string/act_name_fileshortcut" 
+        	android:configChanges="keyboardHidden|orientation" 
+        	android:exported="true" >
+            <!--  This intent-filter allows your shortcuts to be created in the launcher. -->
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- activity-alias android:name="PickFileShortcutActivityLarge"
+            android:targetActivity="PickFileShortcutActivity"
+        	android:label="@string/act_name_fileshortcut" 
+        	android:configChanges="keyboardHidden|orientation" 
+        	android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="shortcut.size" android:value="2" />
+        </activity-alias -->
+        <activity android:name=".SearchableActivity" 
+        	android:exported="true" 
+        	android:configChanges="keyboardHidden|orientation" 
+        	android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+                <action android:name="android.intent.action.VEIW" />
+            </intent-filter>     
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable"/>
+		</activity>
+    	<provider android:name=".SearchProvider" 
+    		android:enabled="true" 
+    		android:multiprocess="true" 
+    		android:exported="true" 
+    		android:authorities="com.blackmoonit.FileBrowser.SearchProvider">
+    	</provider>
+    	<provider android:name="com.blackmoonit.app.PreferencesProvider" 
+    		android:enabled="true" 
+    		android:multiprocess="true" 
+    		android:exported="true" 
+    		android:authorities="com.blackmoonit.FileBrowser.prefs">
+    	</provider>
+    	<provider android:name=".MIMETypeProvider" 
+    		android:enabled="true" 
+    		android:multiprocess="true" 
+    		android:exported="true" 
+    		android:authorities="com.blackmoonit.FileBrowser.mimeType">
+    	</provider>
+    	<provider android:name=".JumpPointProvider" 
+    		android:enabled="true" 
+    		android:multiprocess="true" 
+    		android:exported="true" 
+    		android:authorities="com.blackmoonit.FileBrowser.JumpPoint">
+    	</provider>
+		<activity android:name="AppPreferences" 
+			android:label="@string/act_name_settings" 
+			android:enabled="true" >
+			<intent-filter>
+				<category android:name="android.intent.category.PREFERENCE" />
+			</intent-filter>
+		</activity>
+		<activity android:name="PlaylistCreator" 
+			android:label="@string/act_name_playlist" 
+			android:icon="@drawable/act_createplaylist" 
+			android:theme="@android:style/Theme.Dialog" 
+			android:allowTaskReparenting="true" 
+			android:excludeFromRecents="true" 
+			android:exported="true" 
+			android:enabled="true" 
+			android:configChanges="keyboardHidden|orientation" >
+			<intent-filter>
+				<action android:name="android.intent.action.SEND_MULTIPLE"></action>
+				<category android:name="android.intent.category.DEFAULT"></category>
+				<data android:mimeType="audio/*"></data>
+			</intent-filter>
+		</activity>
+		<activity android:name="ZipPackActivity" 
+			android:label="@string/act_name_zippack" 
+			android:icon="@drawable/act_zippack" 
+			android:theme="@android:style/Theme.Dialog" 
+			android:allowTaskReparenting="true" 
+			android:excludeFromRecents="true" 
+			android:exported="true" 
+			android:enabled="true" 
+			android:configChanges="keyboardHidden|orientation" >
+			<intent-filter>
+				<action android:name="android.intent.action.SEND"></action>
+				<category android:name="android.intent.category.DEFAULT"></category>
+				<data android:mimeType="*/*" android:scheme="file"></data>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.SEND_MULTIPLE"></action>
+				<category android:name="android.intent.category.DEFAULT"></category>
+				<data android:mimeType="*/*"></data>
+			</intent-filter>
+		</activity>
+		<activity android:name="ZipUnpackActivity" 
+			android:label="@string/act_name_zipunpack" 
+			android:icon="@drawable/act_zipunpack" 
+			android:theme="@android:style/Theme.Dialog" 
+			android:excludeFromRecents="true" 
+			android:allowTaskReparenting="true" 
+			android:exported="true" 
+			android:enabled="true" 
+			android:configChanges="keyboardHidden|orientation" >
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"></action>
+				<category android:name="android.intent.category.DEFAULT"></category>
+				<data android:mimeType="application/zip" android:scheme="file"></data>
+			</intent-filter>
+		</activity>
+		<activity android:name="com.blackmoonit.dialog.DialogFileLocation" 
+			android:label="@string/act_name_saveto" 
+			android:theme="@android:style/Theme.Dialog" 
+			android:allowTaskReparenting="true" 
+			android:excludeFromRecents="true" 
+			android:exported="true" 
+			android:enabled="true" 
+			android:configChanges="keyboardHidden|orientation" >
+			<intent-filter>
+				<action android:name="android.intent.action.PICK"></action>
+				<category android:name="android.intent.category.DEFAULT"></category>
+				<category android:name="android.intent.category.BROWSABLE"></category>
+				<data android:scheme="file.new"></data>
+				<data android:scheme="folder.new"></data>
+				<data android:scheme="directory.new"></data>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.PICK"></action>
+				<category android:name="android.intent.category.DEFAULT"></category>
+				<category android:name="android.intent.category.BROWSABLE"></category>
+				<data android:scheme="file.new"></data>
+				<data android:scheme="folder.new"></data>
+				<data android:scheme="directory.new"></data>
+				<data android:mimeType="*/*" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".JumpPointsLiveFolderActivity" 
+			android:label="@string/menu_item_jumpto" 
+			android:icon="@drawable/act_jumplivefolder" 
+			android:excludeFromRecents="true" 
+			android:allowTaskReparenting="true" 
+			android:exported="true" 
+			android:enabled="true" >
+			<intent-filter>
+				<action android:name="android.intent.action.CREATE_LIVE_FOLDER"></action>
+				<category android:name="android.intent.category.DEFAULT"></category>
+			</intent-filter>
+		</activity>
+		
+	</application>
+
+</manifest>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="dialog_filecollision_title">Trovati duplicati</string>
+<string name="dialog_filecollision_overwrite">Sovrascrivi file e cartelle</string>
+<string name="dialog_filecollision_keepboth">Mantieni entrambe le copie</string>
+<string name="dialog_filecollision_skip">Non fare nulla!</string>
+<string name="dialog_filecollision_canceltext">Ignorare i duplicati…</string>
+
+</resources>

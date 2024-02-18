@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/fb_cell"
+  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+  android:padding="6dip" 
+  android:focusable="false" 
+  android:orientation="vertical" 
+  xmlns:tools="http://schemas.android.com/tools" 
+  tools:ignore="HardcodedText" 
+>
+	<!-- This view's tag contains the ViewCache for all views of interest contained within -->
+	<include android:id="@+id/layout_cell_file_icon" 
+	  layout="@layout/file_icon" 
+	  android:layout_gravity="center_horizontal"
+	  android:layout_marginBottom="6dip" 
+	/>
+	<LinearLayout android:id="@+id/LayoutCellTextInfo" 
+	  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+	  android:orientation="vertical" 
+	  android:layout_gravity="center_horizontal"
+	> 
+		<TextView android:id="@+id/fb_cell_filename" 
+		  android:layout_height="wrap_content" android:layout_width="wrap_content" 
+		  android:layout_weight="1" 
+		  android:text="filename"
+		  android:lines="2" 
+		  android:textColor="@android:color/primary_text_dark" 
+		  android:includeFontPadding="true" />
+		<TextView android:id="@+id/fb_cell_filefolder" 
+		  android:layout_height="wrap_content" android:layout_width="wrap_content" 
+		  android:layout_weight="1" 
+		  android:visibility="gone" 
+		  android:textColor="@android:color/tertiary_text_dark" 
+		  android:text="foldername" 
+		  android:lines="2" />
+		<!-- 
+		 -->
+	</LinearLayout>
+</LinearLayout>

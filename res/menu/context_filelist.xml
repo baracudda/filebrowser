@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/menu_item_pick_this_folder" android:visible="false" android:enabled="true" android:checkable="false" android:title="@string/menu_item_pick_this_folder"></item>
+	<item android:id="@+id/menu_item_pick_this_file" android:visible="false" android:enabled="true" android:checkable="false" android:title="@string/menu_item_pick_this_file"></item>
+	<item android:id="@+id/menu_item_pick_this_item" android:visible="false" android:enabled="true" android:checkable="false" android:title="@string/menu_item_pick_this_item"></item>
+	<item android:id="@+id/menu_item_mark_item" android:visible="true" android:enabled="true" android:checkable="false" android:title="@string/menu_item_mark"></item>
+	<item android:id="@+id/menu_item_open_folder" android:visible="false" android:enabled="true" android:checkable="false" android:title="@string/menu_item_open"></item>
+	<item android:id="@+id/menu_item_open_menu" android:visible="true" android:enabled="true" android:checkable="false" android:title="@string/menu_item_open">
+		<menu>
+			<item android:id="@+id/menu_item_open_file" android:visible="true" android:enabled="true" android:checkable="false" android:title="@string/menu_item_open"></item>
+			<item android:id="@+id/menu_item_open_file_edit" android:visible="true" android:enabled="true" android:checkable="false" android:title="@string/menu_item_edit"></item>
+			<item android:id="@+id/menu_item_open_file_with" android:visible="true" android:enabled="true" android:checkable="false" android:title="@string/menu_item_openwith"></item>
+			<item android:id="@+id/menu_item_open_file_as" android:visible="true" android:enabled="true" android:checkable="false" android:title="@string/menu_item_openas"></item>
+		</menu>
+	</item>
+	<item android:id="@+id/menu_item_send_item" android:visible="true" android:enabled="true" android:checkable="false" android:title="@string/menu_item_sendto"></item>
+	<item android:id="@+id/menu_item_audio_menu" android:visible="true" android:enabled="true" android:checkable="false" android:title="@string/menu_item_audio_menu">
+<!-- possible now, but went with dialog instead.  keeping here as reference in case i need it later
+		<menu>
+			<item android:id="@+id/menu_item_audio_ringtone" android:visible="true" android:enabled="true" android:title="@string/menu_item_audio_ringtone" android:checkable="true" android:orderInCategory="1" android:checked="false"></item>
+			<item android:id="@+id/menu_item_audio_notification" android:visible="true" android:enabled="true" android:title="@string/menu_item_audio_notification" android:checkable="true" android:orderInCategory="2" android:checked="false"></item>
+			<item android:id="@+id/menu_item_audio_alarm" android:visible="true" android:enabled="true" android:title="@string/menu_item_audio_alarm" android:checkable="true" android:orderInCategory="3" android:checked="false"></item>
+		</menu>
+ -->
+	</item>
+	<item android:id="@+id/menu_item_jumppoint_add" android:visible="true" android:enabled="true" android:checkable="false" android:title="@string/menu_item_add_jumppoint"></item>
+	<item android:id="@+id/menu_item_rename_item" android:visible="true" android:enabled="true" android:checkable="false" android:title="@string/menu_item_rename"></item>
+	<item android:id="@+id/menu_item_open_symlink" android:visible="false" android:enabled="true" android:checkable="false" android:title="@string/menu_item_open_symlink"></item>
+	<item android:id="@+id/menu_item_delete_item" android:visible="true" android:enabled="true" android:checkable="false" android:title="@string/menu_item_delete"></item>
+</menu>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:ignore="ContentDescription" >
+    
+	<FrameLayout android:id="@+id/LayoutFileIcon" 
+	  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+	>
+		<!-- The view-containing-this-comment's Tag may contain "GridDetail" to help with sorting which view is done first -->
+		<ImageView android:id="@+id/ImageFileIcon"
+		  android:layout_width="56dip" android:layout_height="56dip" 
+		  android:src="@drawable/item_file" 
+		  android:scaleType="fitCenter" 
+		>
+			<!-- The view-containing-this-comment's Tag contains the file path for the image to determine thumbnail image -->
+		</ImageView>
+		<include layout="@layout/file_img_emblems" />
+	</FrameLayout>
+    
+</merge>

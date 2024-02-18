@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="dialog_filecollision_title">Duplicates Found</string>
+<string name="dialog_filecollision_overwrite">Overwrite Files and Folders</string>
+<string name="dialog_filecollision_keepboth">Keep Both Copies</string>
+<string name="dialog_filecollision_skip">Do Nothing!</string>
+<string name="dialog_filecollision_canceltext">Ignoring duplicates…</string>
+
+</resources>

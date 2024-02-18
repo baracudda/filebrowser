@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+  android:layout_height="wrap_content" android:layout_width="wrap_content" 
+  android:nextFocusDown="@+id/dialog_savefile_TextViewFilename" 
+  android:scrollbars="vertical"
+>
+	<ImageButton android:id="@+id/dialog_savefile_ButtonBrowse" 
+	  android:layout_height="64dip" android:layout_width="64dip" 
+	  android:layout_alignParentRight="true" 
+	  android:layout_margin="3dip" 
+	  android:padding="8dip" 
+	  android:scaleType="fitXY" 
+	  android:src="@drawable/icon_search" 
+	  android:contentDescription="@string/title_selectfolder" 
+      android:nextFocusForward="@+id/dialog_savefile_EditTextFilename"
+	/>
+	<TextView android:id="@+id/dialog_savefile_TextViewLocation" 
+	  android:layout_height="wrap_content" android:layout_width="wrap_content" 
+	  android:text="@string/text_savelocation" 
+	  android:textColor="@android:color/primary_text_dark" 
+	  android:layout_margin="3dip" 
+	/>
+	<EditText android:id="@+id/dialog_savefile_EditTextLocation" 
+	  android:layout_height="wrap_content" android:layout_width="fill_parent" 
+	  android:minWidth="208dip"
+	  android:layout_toLeftOf="@+id/dialog_savefile_ButtonBrowse" 
+	  android:layout_below="@+id/dialog_savefile_TextViewLocation" 
+	  android:saveEnabled="true" 
+	  android:selectAllOnFocus="false" 
+	  android:focusable="true" 
+	  android:focusableInTouchMode="true" 
+	  android:freezesText="true" 
+	  android:includeFontPadding="true" 
+	  android:autoLink="none" 
+	  android:lines="1" 
+	  android:imeOptions="normal|actionNext" 
+	  android:imeActionLabel="@string/text_savelocation" 
+	  android:inputType="text|textUri"
+      android:nextFocusForward="@+id/dialog_savefile_ButtonBrowse"
+	/>
+	<RelativeLayout android:id="@+id/dialog_savefile_LayoutSaveFilename"
+	  android:layout_height="wrap_content" android:layout_width="wrap_content" 
+	  android:layout_below="@+id/dialog_savefile_EditTextLocation" 
+	>
+		<TextView android:id="@+id/dialog_savefile_TextViewFilename" 
+		  android:layout_height="wrap_content" android:layout_width="wrap_content" 
+		  android:minWidth="208dip"
+		  android:textColor="@android:color/primary_text_dark" 
+		  android:text="@string/text_savefilename" 
+		  android:layout_margin="3dip" 
+		/>
+		<EditText android:id="@+id/dialog_savefile_EditTextFilename" 
+		  android:layout_height="wrap_content" android:layout_width="fill_parent" 
+		  android:selectAllOnFocus="false" 
+		  android:saveEnabled="true" 
+		  android:focusable="true" 
+		  android:focusableInTouchMode="true" 
+		  android:freezesText="true" 
+		  android:includeFontPadding="true" 
+		  android:lines="1" 
+		  android:autoLink="none" 
+		  android:layout_below="@+id/dialog_savefile_TextViewFilename" 
+		  android:imeOptions="normal|actionDone" 
+		  android:inputType="text|textUri" 
+	      android:nextFocusForward="@+id/ButtonPositive"
+    	  android:nextFocusDown="@+id/ButtonPositive"
+		/>
+	</RelativeLayout>
+	<FrameLayout
+	  android:layout_width="fill_parent" android:layout_height="wrap_content"
+	  android:layout_below="@id/dialog_savefile_LayoutSaveFilename" 
+	>
+    	<include android:id="@+id/dialog_savefile_ButtonPositive" 
+    	    layout="@layout/button_positive" />
+		<include android:id="@+id/dialog_savefile_ButtonNegative" 
+		    layout="@layout/button_negative" />
+	</FrameLayout>
+    
+</RelativeLayout>
+

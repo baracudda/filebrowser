@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:id="@+id/dialog_filecollision_textview_message" 
+      android:layout_width="fill_parent" android:layout_height="wrap_content" 
+      android:layout_alignParentTop="true" 
+      android:text="" 
+      android:padding="6dip"/>
+    <Button android:id="@+id/dialog_filecollision_button_overwrite" 
+      android:layout_width="wrap_content" android:layout_height="wrap_content" 
+      android:layout_below="@+id/dialog_filecollision_textview_message" 
+      android:text="@string/dialog_filecollision_overwrite" 
+      android:drawableLeft="@drawable/dialog_filecollision_overwrite" 
+      android:drawablePadding="4dip" 
+      android:tag="0"/>
+    <Button android:id="@+id/dialog_filecollision_button_keepboth" 
+      android:layout_width="wrap_content" android:layout_height="wrap_content" 
+      android:layout_below="@+id/dialog_filecollision_button_overwrite" 
+      android:layout_alignLeft="@+id/dialog_filecollision_button_overwrite" 
+      android:layout_alignRight="@+id/dialog_filecollision_button_overwrite" 
+      android:text="@string/dialog_filecollision_keepboth" 
+      android:drawableLeft="@drawable/dialog_filecollision_keepboth" 
+      android:drawablePadding="4dip" 
+      android:tag="1"/>
+    <Button android:id="@+id/dialog_filecollision_button_skip" 
+      android:layout_width="wrap_content" android:layout_height="wrap_content" 
+      android:layout_below="@+id/dialog_filecollision_button_keepboth" 
+      android:layout_alignLeft="@+id/dialog_filecollision_button_keepboth" 
+      android:layout_alignRight="@+id/dialog_filecollision_button_keepboth" 
+      android:text="@string/dialog_filecollision_skip" 
+      android:drawableLeft="@drawable/dialog_filecollision_skip" 
+      android:drawablePadding="4dip" 
+      android:tag="2"/>
+</RelativeLayout>

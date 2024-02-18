@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:title="@string/prefscat_sort">
+    <com.blackmoonit.widget.EnumPreference android:defaultValue="name"
+        android:key="pref_key_sort_order"
+        android:title="@string/pref_title_sort_order"
+        android:entries="@array/pref_entries_sort_order"
+        android:entryValues="@array/pref_entryvalues_sort_order"
+        android:dialogTitle="@string/pref_dialog_title_sort_order" />
+    <CheckBoxPreference android:defaultValue="false"
+        android:key="pref_key_sort_reversed"
+        android:title="@string/pref_title_sort_reversed"
+        android:summary="@string/pref_summary_sort_reversed" />
+  </PreferenceCategory>
+</PreferenceScreen>

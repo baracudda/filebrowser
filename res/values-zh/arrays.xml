@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+<string-array name="pref_entries_thumbnail_size">
+	<item>圖示</item>
+	<item>小</item>
+	<item>中</item> 
+	<item>大</item>
+</string-array>
+<string-array name="pref_entries_sort_order">
+	<item>名稱</item>
+	<item>日期</item>
+	<item>大小</item> 
+	<item>類型</item>
+</string-array>
+<string-array name="pref_entries_font_size">
+	<item>自動</item>
+	<item>8</item>
+	<item>10 (小)</item>
+	<item>12</item>
+	<item>14</item>
+	<item>16</item>
+	<item>18 (中)</item>
+	<item>20</item>
+	<item>22</item>
+	<item>24 (大)</item>
+	<item>28</item>
+	<item>32</item>
+</string-array>
+<string-array name="pref_entries_orientation">
+	<item>預設</item>
+	<item>自動</item>
+	<item>縱向</item>
+	<item>橫向</item>
+	<!-- <item>順時針橫向</item> -->
+</string-array>
+</resources>

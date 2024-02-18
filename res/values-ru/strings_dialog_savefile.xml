@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="text_savelocation">Местонахождение:</string>
+<string name="text_savefilename">Имя файла:</string>
+<string name="msg_askbrowser">Браузер не найден, желаете загрузить?</string>
+
+</resources>

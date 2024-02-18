@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><!-- Chinese (Traditional) used in Taiwan -->
+<string name="version_name">版本  %1$s</string>
+<string name="dialog_about_menu_item">關於</string>
+<string name="dialog_about_button_changelog">更新日誌</string>
+<string name="dialog_about_button_faq">常問問題</string>
+<string name="dialog_about_button_email">電子郵</string>
+
+</resources>

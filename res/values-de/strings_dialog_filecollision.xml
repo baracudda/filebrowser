@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="dialog_filecollision_title">Doppel gefunden</string>
+<string name="dialog_filecollision_overwrite">Dateien und Ordner überschreiben</string>
+<string name="dialog_filecollision_keepboth">Beide Versionen behalten</string>
+<string name="dialog_filecollision_skip">Nichts tun!</string>
+<string name="dialog_filecollision_canceltext">Ignoriere Doppel…</string>
+
+</resources>

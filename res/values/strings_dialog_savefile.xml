@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="text_savelocation">Location:</string>
+<string name="text_savefilename">Filename:</string>
+<string name="msg_askbrowser">No browser found, would you like to get one?</string>
+
+</resources>

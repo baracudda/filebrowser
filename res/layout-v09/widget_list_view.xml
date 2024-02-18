@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    
+	<com.blackmoonit.android.FileBrowser.WidgetListView_v09 android:id="@id/android:list" 
+		android:layout_height="wrap_content" android:layout_width="fill_parent" 
+		android:choiceMode="singleChoice" 
+		android:fastScrollEnabled="true" 
+		android:listSelector="@drawable/bkgnd_item_selected_view_list" 
+		android:focusable="true" />
+
+</merge>

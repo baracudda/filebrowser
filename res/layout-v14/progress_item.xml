@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/LayoutProgressItem" 
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_height="wrap_content" android:layout_width="fill_parent" 
+  android:orientation="horizontal" >
+   	
+	<Button android:id="@+id/ButtonCancelProgress"
+	  android:layout_width="wrap_content" android:layout_height="wrap_content"
+	  android:layout_alignParentLeft="true"
+	  android:contentDescription="@android:string/cancel"
+	  android:drawableRight="@drawable/emblem_bool_cancel" 
+	/>
+   	
+	<LinearLayout android:id="@+id/LayoutProgressBars" 
+	  android:layout_height="fill_parent" android:layout_width="wrap_content" 
+	  android:layout_toRightOf="@+id/ButtonCancelProgress" 
+	  android:layout_alignBottom="@id/ButtonCancelProgress"
+	  android:orientation="vertical" 
+	>
+		<RelativeLayout android:id="@+id/LayoutOverallProgressBar" 
+		  android:layout_height="wrap_content" android:layout_width="fill_parent" 
+		  android:layout_weight="1" 
+		  android:layout_margin="1dip" 
+		>
+			<TextView android:id="@+id/TextViewProgressAction" 
+			  android:layout_height="wrap_content" android:layout_width="wrap_content" 
+			  android:layout_alignParentLeft="true" 
+			  android:layout_marginRight="4dip" 
+			  android:text="@string/marked_copying" 
+			  android:textColor="@android:color/primary_text_dark" 
+			  />
+			<ProgressBar android:id="@+id/ProgressBarOverall" 
+			  android:layout_height="wrap_content" android:layout_width="fill_parent" 
+			  android:layout_toRightOf="@+id/TextViewProgressAction" 
+			  style="@android:style/Widget.ProgressBar.Horizontal" 
+			  android:indeterminate="false" 
+			  android:indeterminateOnly="false" 
+			  android:max="100"
+			  />
+			<TextView android:id="@+id/TextViewProgressOverall"
+			  android:layout_height="wrap_content" android:layout_width="fill_parent"
+			  android:layout_alignBottom="@+id/ProgressBarOverall"
+			  android:layout_toRightOf="@+id/TextViewProgressAction"
+			  android:textColor="@android:color/primary_text_light" 
+			  android:ellipsize="start"
+			  android:singleLine="true"
+			  android:scrollHorizontally="true"
+			  />
+		</RelativeLayout>
+		<RelativeLayout android:id="@+id/LayoutItemProgressBar" 
+		  android:layout_height="wrap_content" android:layout_width="fill_parent" 
+		  android:layout_weight="1" 
+		  android:layout_margin="1dip" 
+		>
+			<ProgressBar android:id="@+id/ProgressBarFile" 
+			  android:layout_height="wrap_content" android:layout_width="fill_parent" 
+			  style="@android:style/Widget.ProgressBar.Horizontal" 
+			  android:indeterminate="false" 
+			  android:indeterminateOnly="false" 
+			  />
+			<TextView android:id="@+id/TextViewProgressMsg" 
+			  android:layout_height="wrap_content" android:layout_width="fill_parent" 
+			  android:textColor="@android:color/primary_text_light" 
+			  android:ellipsize="end" 
+			  android:lines="1" 
+			  android:scrollHorizontally="true"
+			  />
+		</RelativeLayout>
+   	</LinearLayout>
+
+</RelativeLayout>

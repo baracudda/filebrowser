@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:title="@string/prefscat_appearance">
+    <CheckBoxPreference android:defaultValue="true"
+        android:key="pref_key_show_thumbnails"
+        android:title="@string/pref_title_show_thumbnails"
+        android:summary="@string/pref_summary_show_thumbnails" />
+    <com.blackmoonit.widget.EnumPreference android:defaultValue="1"
+    	android:dependency="pref_key_show_thumbnails"
+        android:key="pref_key_thumbnail_size"
+        android:title="@string/pref_title_thumbnail_size"
+        android:entries="@array/pref_entries_thumbnail_size"
+        android:entryValues="@array/pref_entryvalues_thumbnail_size"
+        android:dialogTitle="@string/pref_dialog_title_thumbnail_size" />
+    <CheckBoxPreference android:defaultValue="false"
+        android:key="pref_key_hide_notificationbar"
+        android:title="@string/pref_title_hide_notificationbar"
+        android:summary="@string/pref_summary_hide_notificationbar" 
+    />
+    <com.blackmoonit.widget.EnumPreference android:defaultValue="-2"
+        android:key="pref_key_orientation"
+        android:title="@string/pref_title_orientation"
+        android:entries="@array/pref_entries_orientation"
+        android:entryValues="@array/pref_entryvalues_orientation"
+        android:dialogTitle="@string/pref_dialog_title_orientation" />
+    <com.blackmoonit.widget.FontSizePreference android:defaultValue="0"
+        android:key="pref_key_font_size"
+        android:title="@string/pref_title_font_size"
+        android:entries="@array/pref_entries_font_size"
+        android:entryValues="@array/pref_entryvalues_font_size"
+        android:dialogTitle="@string/pref_dialog_title_font_size" 
+        />
+    <CheckBoxPreference android:defaultValue="false"
+        android:key="pref_key_show_hidden"
+        android:title="@string/pref_title_show_hidden"
+        android:summary="@string/pref_summary_show_hidden" />
+    <CheckBoxPreference android:defaultValue="false"
+        android:key="pref_key_show_unreadable"
+        android:title="@string/pref_title_show_unreadable"
+        android:summary="@string/pref_summary_show_unreadable" />
+  </PreferenceCategory>
+</PreferenceScreen>

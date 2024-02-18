@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="prefs_name">com.blackmoonit.android.FileBrowser_preferences</string>
+
+<!-- Pref Keys (DO NOT TRANSLATE) -->
+<string name="pref_key_font_size">pref_key_font_size</string>
+<string name="pref_key_orientation">pref_key_orientation</string>
+<string name="pref_key_show_unreadable">pref_key_show_unreadable</string>
+<string name="pref_key_show_hidden">pref_key_show_hidden</string>
+<string name="pref_key_show_thumbnails">pref_key_show_thumbnails</string>
+<string name="pref_key_backkey_exits">pref_key_backkey_exits</string>
+<string name="pref_key_thumbnail_size">pref_key_thumbnail_size</string>
+<string name="pref_key_sort_order">pref_key_sort_order</string>
+<string name="pref_key_sort_reversed">pref_key_sort_reversed</string>
+<string name="pref_key_home_folder">pref_key_home_folder</string>
+<string name="pref_key_send_clears_marked">pref_key_send_clears_marked</string>
+<string name="pref_key_jump_point_count">pref_key_jump_point_count</string>
+<string name="pref_key_jump_point_">pref_key_jump_point_item_</string>
+<string name="pref_key_search_global_settings">pref_key_search_global_settings</string>
+<string name="pref_key_use_recyclebin">pref_key_use_recyclebin</string>
+<string name="pref_key_viewtype">pref_key_viewtype</string>
+<string name="pref_key_hide_notificationbar">pref_key_hide_notificationbar</string>
+
+</resources>
